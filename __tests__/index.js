@@ -19,6 +19,10 @@ describe("find intact classes", () => {
     it("can find .triple-simple-class", () => {
         expect(result.includes(".triple-simple-class") === true).toBe(true)
     })
+
+    it("does not remove unused with used prefix", () => {
+        expect(result.includes(".single3") === true).toBe(true)
+    })
 })
 
 describe("callback", () => {
